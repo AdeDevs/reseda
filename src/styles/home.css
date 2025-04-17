@@ -1,0 +1,108 @@
+.home-page {
+    width: 100%;
+    box-sizing: border-box;
+    font-family: "montserrat", sans-serif;
+}
+
+.home-page .home-hero {
+    padding: 30px 40px;
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom: 1px solid #292929;
+}
+
+.home-hero h6 {
+    font-size: 22vw;
+    line-height: 90%;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-stretch: condensed;
+    color: #292929;
+    text-align: right;
+    letter-spacing: -1vw;
+}
+
+.home-hero .about {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.about .about-bg {
+    height: 110vh;
+    width: 55%;
+    background-color: #292929;
+    background-image: url(../assets/hero-bg.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.about .about-info {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.about-info h1 {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 100%;
+    text-transform: uppercase;
+}
+
+.about-info p {
+    font-family: 'Courier New', sans-serif;
+    font-size: 16px;
+    width: 85%;
+}
+
+.about-info .link {
+    margin-top: 10px;
+}
+
+.link a {
+    color: inherit;
+    text-underline-offset: 3px;
+}
+
+@media screen and (max-width: 800px) {
+    .home-page .home-hero {
+        padding: 20px 30px;
+    }
+    .home-hero h6 {
+        font-size: 21vw;
+        text-align: left;
+    }
+    .home-hero .about {
+        flex-direction: column;
+        gap: 30px;
+        margin-top: 30px;
+    }
+    .about .about-bg {
+        height: 60vh;
+        width: 100%;
+    }
+    .about .about-info {
+        width: 100%;
+        gap: 30px;
+    }
+    .about-info p {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .home-page .home-hero {
+        padding: 20px;
+    }
+    .about .about-bg {
+        height: 50vh;
+    }
+    .about-info .link {
+        margin-top: 25px;
+    } 
+}
