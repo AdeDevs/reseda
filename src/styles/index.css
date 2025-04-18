@@ -108,7 +108,7 @@
   color: inherit;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 850px) {
   .toggle {
     display: flex;
   }
@@ -120,7 +120,7 @@
   }
 }
 
-@media screen and (min-width:801px) {
+@media screen and (min-width: 851px) {
   .toggle, .mobile-nav {
     display: none;
   }

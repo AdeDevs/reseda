@@ -5,7 +5,7 @@
 }
 
 .home-page .home-hero {
-    padding: 30px 40px;
+    padding: 25px 40px 70px 40px;
     width: 100%;
     box-sizing: border-box;
     border-bottom: 1px solid #292929;
@@ -61,7 +61,7 @@
 }
 
 .about-info .link {
-    margin-top: 10px;
+    margin-top: 60px;
 }
 
 .link a {
@@ -69,29 +69,201 @@
     text-underline-offset: 3px;
 }
 
-@media screen and (max-width: 800px) {
+.home-page .home-main {
+    padding: 70px 40px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.winter-collection .winter {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.winter .winter-info {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.winter-info h1 {
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.winter-info .winter-foot {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    font-family: 'Courier New', sans-serif;
+    font-size: 14px;
+    text-align: justify;
+}
+
+.winter-foot a {
+    color: inherit;
+    text-transform: capitalize;
+}
+
+.winter-foot .winter-blurry {
+    background-image: url(../assets/winter-blurry.jpeg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    cursor: pointer;
+    height: 30vh;
+}
+
+.winter .winter-bg {
+    background-image: url(../assets/winter-bg.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 130vh;
+    width: 60%;
+    cursor: pointer;
+}
+
+.winter-collection .winter-potrait {
+    background-image: url(../assets/winter-potrait.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 95vh;
+    width: 40%;
+    margin: 60px auto 0 auto;
+    cursor: pointer;
+}
+
+.winter-collection .test {
+    background: #000000f1;
+    height: 100vh;
+    padding: 15px 0;
+    width: 100%;
+    box-sizing: border-box;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s ease-in-out;
+}
+
+.test.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.test .togle {
+    width: 15px;
+    max-height: 70px;
+    padding: 10px 10px 12px 10px;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    right: 60px;
+    top: 20px;
+    gap: 7px;
+    cursor: pointer;
+}
+
+.test .togle span {
+    display: block;
+    width: 100%;
+    height: 1.5px;
+    transition: all .1s ease-in-out;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+}
+
+.test .togle .first {
+    rotate: 45deg;
+    position: absolute;
+    top: 10px;
+}
+
+.test .togle .second {
+    position: absolute;
+    rotate: -45deg;
+    top: 10px;
+}
+
+.test .test-bg {
+    background-image: url(../assets/winter-bg.jpeg);
+    background-position: center;
+    background-size: cover;
+    width: 600px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+
+@media screen and (max-width: 850px) {
     .home-page .home-hero {
         padding: 20px 30px;
     }
+
     .home-hero h6 {
         font-size: 21vw;
         text-align: left;
     }
+
     .home-hero .about {
         flex-direction: column;
         gap: 30px;
         margin-top: 30px;
     }
+
     .about .about-bg {
         height: 60vh;
         width: 100%;
     }
+
     .about .about-info {
         width: 100%;
         gap: 30px;
     }
+
     .about-info p {
         width: 100%;
+    }
+    .home-page .home-main {
+        padding: 60px 30px;
+    }
+    .winter-collection .winter {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .winter .winter-info {
+        width: 100%;
+    }
+    .winter .winter-bg {
+        height: 50vh;
+        width: 100%;
+    }
+    .winter-collection .winter-potrait {
+        height: 50vh;
+        width: 100%;
+        margin: 30px auto 0 auto;
+    }
+    .test .test-bg {
+        width: 90%;
+        height: 90vh;
+    }
+    .test .togle {
+        right: 5vw;
+        top: 1vh;
     }
 }
 
@@ -104,5 +276,21 @@
     }
     .about-info .link {
         margin-top: 25px;
-    } 
+    }
+    .home-page .home-main {
+        padding: 60px 20px;
+    }
+    .winter .winter-bg {
+        height: 40vh;
+        width: 100%;
+    }
+    .winter-collection .winter-potrait {
+        height: 40vh;
+        width: 100%;
+        margin: 30px auto 0 auto;
+    }
+    .test .test-bg {
+        width: 90%;
+        height: 90vh;
+    }
 }
