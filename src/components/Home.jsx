@@ -1,11 +1,6 @@
-import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 export default function HomePage() {
-    // const [fullScreenView, setFullScreenView] = useState();
-    // const toggleFullScreen = () => {
-    //     setFullScreenView(!fullScreenView)
-    // }
     return (
         <div className="home-page">
             <header className="home-hero">
@@ -55,7 +50,6 @@ export default function HomePage() {
                     <div className="item item-4"></div>
                     <div className="item item-5"></div>
                     <div className="item item-6"></div>
-                    {/* <!-- <div class="item item-7">7</div> --> */}
                 </div>
             </main>
         </div>
