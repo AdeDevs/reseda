@@ -70,9 +70,31 @@
 }
 
 .home-page .home-main {
-    padding: 70px 40px;
+    padding: 70px 0;
+    padding-bottom: 0;
     width: 100%;
     box-sizing: border-box;
+}
+
+.home-main h1 {
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.home-main p {
+    font-family: 'Courier New', sans-serif;
+    font-size: 14px;
+    text-align: justify;
+}
+
+.home-main a {
+    color: inherit;
+    text-transform: capitalize;
+}
+
+.winter-collection {
+    padding: 0 40px;
 }
 
 .winter-collection .winter {
@@ -100,9 +122,6 @@
     display: flex;
     flex-direction: column;
     gap: 35px;
-    font-family: 'Courier New', sans-serif;
-    font-size: 14px;
-    text-align: justify;
 }
 
 .winter-foot a {
@@ -140,72 +159,77 @@
     cursor: pointer;
 }
 
-.winter-collection .test {
-    background: #000000f1;
-    height: 100vh;
-    padding: 15px 0;
+.fall-collection {
+    margin: 30px auto;
+    padding: 40px;
+    border-top: 1px solid #292929;
     width: 100%;
     box-sizing: border-box;
-    position: fixed;
+    display: grid;
+    height: fit-content;
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: 1fr 1fr 300px;
+    gap: 15px 15px;
+}
+
+.item {
+    font-size: 20px;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    visibility: hidden;
-    transition: all .3s ease-in-out;
-}
-
-.test.show {
-    opacity: 1;
-    visibility: visible;
-}
-
-.test .togle {
-    width: 15px;
-    max-height: 70px;
-    padding: 10px 10px 12px 10px;
-    box-sizing: border-box;
-    flex-direction: column;
-    justify-content: center;
-    position: absolute;
-    right: 60px;
-    top: 20px;
-    gap: 7px;
-    cursor: pointer;
-}
-
-.test .togle span {
-    display: block;
-    width: 100%;
-    height: 1.5px;
-    transition: all .1s ease-in-out;
-    background-color: #fff;
-    position: absolute;
-    left: 0;
-}
-
-.test .togle .first {
-    rotate: 45deg;
-    position: absolute;
-    top: 10px;
-}
-
-.test .togle .second {
-    position: absolute;
-    rotate: -45deg;
-    top: 10px;
-}
-
-.test .test-bg {
-    background-image: url(../assets/winter-bg.jpeg);
     background-position: center;
     background-size: cover;
-    width: 600px;
-    height: 100%;
-    margin: 0 auto;
+    background-repeat: no-repeat;
+}
+
+ .item-1 {
+    grid-column: 1/3;
+    grid-row: 1;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    font-size: 14px;
+}
+.item-2 {
+    grid-column: 3/4;
+    grid-row: 1;
+    min-height: 50vh;
+    height: 50vw;
+    background-image: url(../assets/fall-1.jpeg);
+}
+.item-3 {
+    grid-column: 1/3;
+    height: 55vw;
+    background-image: url(../assets/fall-2.jpeg);
+}
+.item-4 {
+    grid-column: 3/4;
+    grid-row: 3;
+    min-height: 50vw;
+    background-image: url(../assets/fall-3.jpeg);
+}
+.item-5 {
+    grid-row: 4;
+    height: 47vw;
+    background-image: url(../assets/fall-4.jpeg);
+}
+.item-6 {
+    grid-row: 4;
+    height: 47vw;
+    background-image: url(../assets/fall-5.jpeg);
+}
+
+.item-1 h1 {
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.item-1 p {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+    width: 70%;
+    margin-bottom: 30px;
 }
 
 
@@ -238,8 +262,8 @@
     .about-info p {
         width: 100%;
     }
-    .home-page .home-main {
-        padding: 60px 30px;
+    .winter-collection {
+        padding: 0 30px;
     }
     .winter-collection .winter {
         flex-direction: column;
@@ -257,13 +281,40 @@
         width: 100%;
         margin: 30px auto 0 auto;
     }
-    .test .test-bg {
-        width: 90%;
-        height: 90vh;
+    .fall-collection {
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        padding: 40px 30px;
     }
-    .test .togle {
-        right: 5vw;
-        top: 1vh;
+    .item-1 p:nth-child(1) {
+        width: 100%;
+        margin-top: 50px;
+    }
+    .item-1 {
+        grid-column: 1/5;
+    }
+    .item-2 {
+        grid-row: 2;
+        height: 50vw;
+        min-height: auto;
+        grid-column: 3/5;
+    }
+    .item-3 {
+        grid-row: 3;
+        grid-column: 1/5;
+    }
+    .item-4 {
+        grid-row: 4;
+        grid-column: 3/5;
+    }
+    .item-5, .item-6 {
+        grid-row: 5;
+    }
+    .item-5 {
+        grid-column: 1/3;
+    }
+    .item-6 {
+        grid-column: 3/5;
     }
 }
 
@@ -278,7 +329,10 @@
         margin-top: 25px;
     }
     .home-page .home-main {
-        padding: 60px 20px;
+        padding: 60px 0;
+    }
+    .winter-collection {
+        padding: 0 20px;
     }
     .winter .winter-bg {
         height: 40vh;
@@ -292,5 +346,8 @@
     .test .test-bg {
         width: 90%;
         height: 90vh;
+    }
+    .fall-collection {
+        padding: 40px 20px;
     }
 }
