@@ -31,7 +31,8 @@
 }
 
 .about .about-bg {
-    height: 110vh;
+    min-height: 80vh;
+    height: 60vw;
     width: 55%;
     background-color: #292929;
     background-image: url(../assets/hero-bg.jpeg);
@@ -41,7 +42,7 @@
 }
 
 .about .about-info {
-    width: 35%;
+    width: 40%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -105,7 +106,7 @@
 }
 
 .winter .winter-info {
-    width: 30%;
+    width: 33%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -135,7 +136,7 @@
     background-size: cover;
     width: 100%;
     cursor: pointer;
-    height: 30vh;
+    height: 20vw;
 }
 
 .winter .winter-bg {
@@ -143,7 +144,8 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 130vh;
+    height: 80vw;
+    min-height: 70vh;
     width: 60%;
     cursor: pointer;
 }
@@ -153,9 +155,9 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 95vh;
+    height: 55vw;
     width: 40%;
-    margin: 60px auto 0 auto;
+    margin: 55px auto 0 auto;
     cursor: pointer;
 }
 
@@ -174,9 +176,6 @@
 
 .item {
     font-size: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -184,6 +183,7 @@
 
  .item-1 {
     grid-column: 1/3;
+    display: flex;
     grid-row: 1;
     flex-direction: column;
     align-items: start;
@@ -228,8 +228,72 @@
 .item-1 p {
     font-family: 'Courier New', Courier, monospace;
     font-size: 15px;
-    width: 70%;
+    width: 50%;
     margin-bottom: 30px;
+}
+
+
+.still-collection {
+    padding: 40px;
+    padding-bottom: 120px;
+    border-top: 1px solid #292929;
+    width: 100%;
+    box-sizing: border-box;
+    display: grid;
+    height: fit-content;
+    gap: 15px;
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.still {
+    font-size: 20px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.still-1 p {
+    margin-bottom: 50px;
+    width: 80%;
+}
+.still-1 P:nth-child(1) {
+    margin-bottom: 50px;
+}
+
+.still-1 {
+    grid-column: 1/4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    height: 60vw;
+    min-height: 60vh;
+}
+.still-2 {
+    background-color: chartreuse;
+    background-image: url(../assets/still-1.jpeg);
+    grid-column: 4/9;
+}
+.still-3 {
+    background-color: thistle;
+    background-image: url(../assets/still-2.jpeg);
+    height: 49vw;
+    grid-column: 1/4;
+}
+.still-4 {
+    background-color: violet;
+    background-image: url(../assets/still-3.jpeg);
+    height: 49vw;
+    grid-column: 6/9;
+    width: 100%;
+    grid-row: 3/4;
+}
+.still-5 {
+    background-color: aquamarine;
+    background-image: url(../assets/still-4.jpeg);
+    height: 49vw;
+    grid-column: 3/6;
+    grid-row: 4/5;
 }
 
 
@@ -281,6 +345,9 @@
         width: 100%;
         margin: 30px auto 0 auto;
     }
+    .winter-foot .winter-blurry {
+        height: 50vw;
+    }
     .fall-collection {
         grid-template-rows: auto auto auto auto auto;
         grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -316,6 +383,35 @@
     .item-6 {
         grid-column: 3/5;
     }
+    .still-collection {
+        padding: 40px 30px;
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+    .still-1 p {
+        width: 100%;
+    }
+    .still-1 {
+        grid-column: 1/11;
+        min-height: 40vw;
+    }
+    .still-2 {
+        grid-row: 2;
+        height: 40vw;
+        grid-column: 5/11;
+    }
+    .still-3 {
+        grid-row: 3;
+        grid-column: 1/5;
+    }
+    .still-4 {
+        grid-row: 4;
+        grid-column: 6/11;
+    }
+    .still-5 {
+        grid-row: 5;
+        grid-column: 1/6;
+    }
 }
 
 @media screen and (max-width: 550px) {
@@ -349,5 +445,18 @@
     }
     .fall-collection {
         padding: 40px 20px;
+    }
+    .still-collection {
+        padding: 40px 20px;
+        padding-bottom: 0;
+    }
+    .still-1 {
+        height: fit-content;
+    }
+    .still-1 p {
+        margin-bottom: 10px;
+    }
+    .still-1 p:nth-child(1) {
+        margin-top: 80px;
     }
 }
