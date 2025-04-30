@@ -6,7 +6,7 @@
   background-color: #f4f2ea;
   width: 100%;
   padding: 30px 40px;
-  color: #292929;
+  color: #1c1c1d;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -16,6 +16,11 @@
   font-family: "montserrat", sans-serif;
   text-transform: uppercase;
   border-bottom: 1px solid #000;
+}
+
+.nav-bar.information {
+  background-color: #1c1c1d;
+  border-bottom: 1px solid #323235;
 }
 
 .nav-bar h1 {
@@ -48,6 +53,15 @@
   text-decoration-color: #000;
 }
 
+.nav-bar.information h1, .nav-bar.information .desk-nav {
+  color: #f4f2ea;
+}
+
+.nav-bar.information a:hover, .nav-bar.information a.active {
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  text-decoration-color: #f4f2ea;
+}
 
 .toggle {
   display: none;
@@ -56,6 +70,7 @@
   flex-direction: column;
   justify-content: center;
   position: relative;
+  box-sizing: border-box;
   gap: 7px;
 }
 
@@ -68,14 +83,20 @@
   z-index: 1001;
 }
 
+.first.information, .second.information {
+background-color: #f4f2ea;
+}
+
 .toggle.show .first{
   rotate: 45deg;
   position: absolute;
+  background-color: #1c1c1d;
   top: 0;
 }
 
 .toggle.show .second {
   position: absolute;
+  background-color: #1c1c1d;
   rotate: -50deg;
   top: 0;
 }
@@ -106,10 +127,14 @@
 
 .mobile-nav a {
   color: inherit;
+  text-decoration-thickness: 2px;
+  text-decoration-color: transparent;
+  text-underline-offset: 1px;
+  transition: all .3s ease-in-out;
 }
 
 footer {
-  background-color: rgb(28, 28, 29);
+  background-color: #1c1c1d;
   width: 100%;
   box-sizing: border-box;
   color: #f4f2ea;
@@ -169,7 +194,7 @@ footer .head {
 }
 .footer-info button:hover {
   background-color: #f4f2ea;
-  color: #292929;
+  color: #1c1c1d;
 }
 
 .head .footer-links {
@@ -272,7 +297,7 @@ footer h6 {
     border-left: 1px solid #000;
     padding: 20px;
     width: 40%;
-    color: #292929;
+    color: #1c1c1d;
   }
   .head .footer-links {
     flex-direction: column;
