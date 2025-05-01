@@ -1,0 +1,146 @@
+.services-page {
+    width: 100%;
+    box-sizing: border-box;
+    font-family: "montserrat", sans-serif;
+    color: #1c1c1d;
+}
+
+.services-page .services-main {
+    padding: 60px 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.services-main h1 {
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.services-main p,
+.services-main ul li {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+}
+
+.services-main .services-list {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 30px 40px;
+    border-bottom: 1px solid #1c1c1d;
+}
+
+.services-main .services-list:nth-last-child(1) {
+    border-bottom: none;
+}
+
+.services-list .services-about {
+    width: 35%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    justify-content: space-between;
+}
+
+.services-about p {
+    margin-top: 200px;
+}
+
+.services-about ul {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    padding: 20px 0 0 30px;
+}
+
+.services-about button {
+    margin-top: 40px;
+    padding: 25px 50px;
+    border: 1px solid #1c1c1d;
+    background-color: transparent;
+    font-family: inherit;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+}
+
+.services-about button:hover {
+    background-color: #1c1c1d;
+    color: #f4f2ea;
+}
+
+
+.services-list .services-bg {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 38%;
+    height: 49vw;
+    min-height: 50vh;
+    background-color: red;
+}
+
+.standard {
+    background-image: url(../assets/standard-img.jpg);
+}
+
+.deluxe {
+    background-image: url(../assets/deluxe-img.jpeg);
+}
+
+.professional {
+    background-image: url(../assets/professional-img.jpeg);
+}
+
+.elite {
+    background-image: url(../assets/elite-img.jpg);
+}
+
+@media screen and (max-width: 850px) {
+    .services-page .services-main {
+        padding: 40px 0;
+    }
+    .services-main .services-list {
+        flex-direction: column;
+        padding: 30px;
+        gap: 30px;
+    }
+
+    .services-list .services-about {
+        width: 100%;
+    }
+
+    .services-list .services-bg {
+        width: 100%;
+        height: 40vw;
+    }
+
+    .services-about p {
+        margin-top: 50px;
+    }
+
+    .services-about button {
+        margin-top: 50px;
+    }
+
+    .services-list .services-bg {
+        min-height: auto;
+        height: 57vw;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .services-page .services-main {
+        padding: 10px 0;
+    }
+    .services-main .services-list {
+        padding: 30px 20px;
+    }
+    .services-list .services-bg {
+        min-height: auto;
+        height: 75vw;
+    }
+}

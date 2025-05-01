@@ -124,6 +124,9 @@ background-color: #f4f2ea;
   opacity: 1;
   visibility: visible;
 }
+.mobile-nav.show a.active {
+  text-decoration-color: #1c1c1d;
+}
 
 .mobile-nav a {
   color: inherit;
