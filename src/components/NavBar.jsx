@@ -15,7 +15,7 @@ export default function NavBar() {
             <h1><NavLink to="/">reseda photography</NavLink></h1>
             <ul className="desk-nav">
                 <li><NavLink to="/services">services</NavLink></li>
-                <li><a href="#">gallery</a></li>
+                <li><NavLink to="/gallery">gallery</NavLink></li>
                 <li><NavLink to="/information">information </NavLink> </li>
                 <li><NavLink to="/schedule">schedule a shoot</NavLink></li>
             </ul>
@@ -25,9 +25,9 @@ export default function NavBar() {
             </div>
             <ul className={`mobile-nav ${showMenu ? "show" : ""}`}>
                 <li onClick={toggleMenu}><NavLink to="/services">services</NavLink></li>
-                <li onClick={toggleMenu}><a href="#">gallery</a></li>
+                <li onClick={toggleMenu}><NavLink to="/gallery">gallery</NavLink></li>
                 <li onClick={toggleMenu}><NavLink to="/information">information </NavLink> </li>
-                <li><NavLink to="/schedule">schedule a shoot</NavLink></li>
+                <li onClick={toggleMenu}><NavLink to="/schedule">schedule a shoot</NavLink></li>
             </ul>
         </div>
     )

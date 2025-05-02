@@ -1,0 +1,131 @@
+.gallery-page {
+    width: 100%;
+    box-sizing: border-box;
+    font-family: "montserrat", sans-serif;
+    color: #1c1c1d;
+}
+
+.gallery-page .gallery-main {
+    padding: 60px 40px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.fall-gallery {
+    margin: 0 auto;
+    padding: 0;
+    border-top: none;
+    width: 100%;
+    box-sizing: border-box;
+    display: grid;
+    height: fit-content;
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: 1fr 1fr 300px;
+    gap: 15px 15px;
+}
+
+.winter-gallery {
+    margin: 0 auto;
+    padding: 0;
+    border-top: none;
+    width: 100%;
+    box-sizing: border-box;
+    display: grid;
+    align-items: end;
+    height: fit-content;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr 300px;
+    gap: 15px 0;
+}
+
+.winter-gallery .winter {
+    box-sizing: border-box;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.winter-1 {
+    background-image: url(../assets/winter-bg.jpeg);
+    height: 60vw;
+    grid-column: 2/7;
+}
+.winter-2 {
+    background-image: url(../assets/winter-blurry.jpeg);
+    height: 20vw;
+    grid-row: 1;
+    grid-column: 1/2;
+    width: 90%;
+}
+.winter-3 {
+    background-image: url(../assets/winter-potrait.jpeg);
+    height: 59vw;
+    grid-row: 3;
+    grid-column: 2/5;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.still-gallery {
+    padding: 0;
+    padding-bottom: 0;
+    border-top: none;
+    width: 100%;
+    box-sizing: border-box;
+    display: grid;
+    height: fit-content;
+    margin-top: -40px;
+    gap: 15px;
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.still-gallery .still-2 {
+    height: 60vw;
+}
+
+@media screen and (max-width: 850px) {
+    .gallery-page .gallery-main {
+        padding: 50px 30px;
+        gap: 40px;
+    }
+    .winter-gallery {
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 15px 15px;
+    }
+    .winter-1 {
+        grid-column: 3/5;
+    }
+    .winter-2 {
+        width: 100%;
+        grid-column: 1/3;
+    }
+    .winter-3 {
+        grid-column: 1/5;
+        width: 100%;
+        height: 40vw;
+    }
+    .fall-gallery {
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .still-gallery {
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .gallery-page .gallery-main {
+        padding: 30px 20px;
+        gap: 30px;
+    }
+    .winter-gallery {
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}

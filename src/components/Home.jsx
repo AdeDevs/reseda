@@ -53,7 +53,7 @@ export default function HomePage() {
                 </div>
                 <div className="still-collection">
                     <div className="still still-1">
-                        <h1>fall collection</h1>
+                        <h1>still collection</h1>
                         <div>
                             <p>
                                 Photos are metaphors, making the abstract concrete and mystifying the mundane. Be clear, be confident, and don’t overthink it. The beauty of your story is that it’s going to continue to evolve and your site can evolve with it. Your goal should be to make it feel right for right now. Later will take care of itself.
